@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#AEEABF"
+    tools:context=".SecondMainActivity">
+
+<!--The View to the second activity-->
+    <TextView
+        android:id="@+id/second_activity_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Implementation 2"
+        android:textSize="20dp"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="127dp"
+        tools:visibility="visible" />
+
+<!--The button to remove the topmost fragment-->
+    <Button
+        android:id="@+id/removeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Remove Fragment"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addFragment"
+        app:layout_constraintTop_toBottomOf="@+id/second_activity_textView1"
+        tools:ignore="MissingConstraints" />
+
+<!--The button to add fragment -->
+    <Button
+        android:id="@+id/addFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Fragment added"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/removeFragment"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_activity_textView1"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible" />
+
+<!--Layout for storing the fragments-->
+    <FrameLayout
+        android:id="@+id/frameLayoutFragmentId"
+        android:name="com.example.weektwotask.FirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="628dp"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,21 +32,11 @@ class SecondMainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.frameLayoutFragmentId, FirstFragment.newInstance("$fragmentCount"))
                 addToBackStack(null)
-
-                /**
-                 * Schedules a commit of this transaction. The commit does not happen immediately;
-                 * it will be scheduled as work on the main thread to be done the next time that thread is ready.
-                 *
-                 * */
                 commit()
             }
         }
 //        Register a callback to be invoked when this view is clicked.
         this.removeFragment.setOnClickListener {
-            /**
-             * Pop the top state off the back stack. This function is asynchronous -- it enqueues the request to pop,
-             * but the action will not be performed until the application returns to its event loop.
-             * */
             fragmentManager.popBackStack()
         }
 

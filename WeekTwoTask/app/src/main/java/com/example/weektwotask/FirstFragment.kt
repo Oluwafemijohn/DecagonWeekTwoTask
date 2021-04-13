@@ -23,9 +23,7 @@ class FirstFragment : Fragment() {
         }
     }
 
-    /**
-     * create the view for the fragment view and inflate the layout
-     * */
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -34,9 +32,7 @@ class FirstFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
-    /**
-     * Save the instance of the fragment count
-     * */
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fragmentViewId.text = param1

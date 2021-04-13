@@ -23,9 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var activityStatus: TextView
     private lateinit var orientationStatus: TextView
 
-    /**
-     * creating the instance of the handler
-     */
+
     private val handler = Handler()
     var portraitCounter = 0
     var landscapeCounter = 0
@@ -61,10 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        /**
-         *  Adding intent to the button that lead to the next activity
-         *
-         * */
+
         val button = findViewById<Button>(R.id.button)
 //      Register a callback to be invoked when this button view is clicked
         button.setOnClickListener {
@@ -83,38 +78,31 @@ class MainActivity : AppCompatActivity() {
         outState.putInt("landscapeCounter", landscapeCounter)
     }
 
-    //  The onResume code block Method
     override fun onStart() {
         super.onStart()
         handler.postDelayed({ activityStatus.text = "onStart()" }, 2000)
     }
 
-
-    //  The onResume code block Method
     override fun onResume() {
         super.onResume()
         handler.postDelayed({ activityStatus.text = "onResume()" }, 3000)
     }
 
-    //  The onPause code block Method
     override fun onPause() {
         super.onPause()
         activityStatus.text = "onPause()"
     }
 
-    //  The onStop code block Method
     override fun onStop() {
         super.onStop()
         activityStatus.text = "onStop()"
     }
 
-    //  The onRestart code block Method
     override fun onRestart() {
         super.onRestart()
         activityStatus.text = "onRestart()"
     }
 
-    //  The onDestroy code block Method
     override fun onDestroy() {
         super.onDestroy()
         activityStatus.text = "onDestroy()"

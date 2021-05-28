@@ -60,13 +60,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val button = findViewById<Button>(R.id.button)
-//      Register a callback to be invoked when this button view is clicked
-        button.setOnClickListener {
-//            Create an intent for a SecondMainActivity component
-            val intent = Intent(this, SecondMainActivity::class.java)
-            startActivity(intent)
-        }
+//        val button = findViewById<Button>(R.id.button)
+////      Register a callback to be invoked when this button view is clicked
+//        button.setOnClickListener {
+////            Create an intent for a SecondMainActivity component
+//            val intent = Intent(this, SecondMainActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
 
